@@ -1,14 +1,52 @@
+/*variables a utilizar*/
+
+:root {
+  --color-primary-100: #66aad3;
+  --color-primary-200: #1a80bc;
+  --color-primary-300: #0072b5;
+  --color-primary-400: #0067a3;
+  --color-primary-500: #00446d;
+
+  --green-100: #66c7a9;
+  --green-200: #33b48d;
+  --green-300: #00a170;
+  --green-400: #009165;
+  --green-500: #00714e;
+
+  --yellow-100: #ffd2a1;
+  --yellow-200: #fdb464;
+  --yellow-300: #fdac53;
+  --yellow-400: #ca8a42;
+  --yellow-500: #b1783a;
+
+  --red-100: #e77a70;
+  --red-200: #e05447;
+  --red-300: #dd4132;
+  --red-400: #c73b2d;
+  --red-500: #9b2e23;
+
+  --grey-100: #fcfcfc;
+  --grey-200: #c8cdd0;
+  --grey-300: #a0a7ac;
+  --grey-400: #2a3b47;
+  --grey-500: #1a252d;
+
+  --font-title: "Roboto", sans-serif;
+  --font-normal: "Lato", sans-serif;
+}
 *,
 ::after,
 ::before {
   box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
-body, h1 {
+body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-normal);
+  color: var(--grey-400);
+  font-size: 17px;
 }
 .container {
   width: 95%;
@@ -16,140 +54,173 @@ body, h1 {
   margin-left: auto;
   margin-right: auto;
 }
-
 ul {
   list-style: none;
 }
-
 a {
   text-decoration: none;
 }
-
-img{
+img {
   display: block;
   max-width: 100%;
 }
-.nav,
-.container-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.container-menu {
-  gap: 20px;
-}
+/* ---- utilidades----- */
 
-.header{
-  padding: 1rem 0;
-  background-color: #25AAAA;
+.font-title {
+  font-family: var(--font-title);
+  font-weight: 700;
 }
-.menu__enlace{
-  font-size: 1.2rem;
-  color: white;
+.title {
+  font-size: 2rem;
+  color: var(--color-primary-400);
 }
-/* banner */
-.banner{
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-  background: #25AAAA;
+.text-center {
+  text-align: center;
 }
-.container-banner {
-  min-height: 600px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.banner__title{
-  text-transform: uppercase;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-
-.banner__copy{
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #e6e1e1;
-
-}
-.banner-content{
-  width: 40%;
-}
-.banner-image{
-  width: 50%;
-}
-
-.btn{
+.btn {
   border-color: transparent;
   outline: none;
-  padding: .5rem 1rem;
+  padding: 0.7rem 1.5rem;
   font-size: 1.1rem;
   cursor: pointer;
-  color: black;
-  background: white;
+  border-radius: 0.5rem;
 }
-
-/* grid*/
-
-.grid{
+.btn--yellow {
+  color: var(--yellow-500);
+  background-color: var(--yellow-100);
+}
+.btn--white {
+  color: var(--color-primary-300);
+  background: var(--grey-100);
+  box-shadow: 0 2px 5px var(--color-primary-100);
+}
+.text-white-100 {
+  color: var(--grey-100);
+}
+.text-white-200 {
+  color: var(--grey-200);
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px 20px;
 }
 
-.text-center{
-  text-align: center;
-  margin-bottom: 2rem;
+/* ---- header ---- */
+
+.header {
+  padding: 1rem 0;
+  background-color: var(--color-primary-300);
+}
+.logo {
+  width: 70px;
+}
+.container-menu {
+  gap: 20px;
+}
+.menu__enlace {
+  font-size: 1.2rem;
+  color: var(--grey-100);
 }
 
+/* ----- banner -----*/
+
+.banner {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+  background: var(--color-primary-300);
+}
+.container-banner {
+  min-height: 600px;
+}
+.banner__title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--yellow-200);
+}
+
+.banner__copy {
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+}
+.banner-content {
+  width: 40%;
+}
+.banner-image {
+  width: 50%;
+}
+
+/* ---- Quienes somos -----*/
+
+.quienesSomos .grid {
+  gap: 3rem;
+  min-height: 100vh;
+  align-items: center;
+}
+
+/* ---- Adopcion ---- */
+
+
+
 /* Adopciom*/
-.adopcion{
+.adopcion {
   padding: 2rem 0;
 }
-.card{
+.card {
   position: relative;
   overflow: hidden;
   cursor: pointer;
 }
-.card img{
+.card img {
   width: 100%;
   height: 270px;
   object-fit: cover;
 }
 
-.card__label{
+.card__label {
+  font-size: 1rem;
   position: absolute;
   top: 0;
   left: 0;
-  background: #25AAAA;
-  padding: .3rem;
+  background: var(--color-primary-100);
+  color: var(--color-primary-500);
+  padding: 0.5rem 1rem;
 }
-.card__label--adoptado{
-  background: orange;
+.card__label--adoptado {
+  background: var(--red-100);
+  color: var(--red-500);
 }
 
-.detalle{
+.detalle {
   position: absolute;
-  background: rgba(0,0,0,.7);
-  color: white;
+  background: var(--yellow-100);
+  border: 1px solid var(--yellow-300);
+  color: var(--yellow-500);
   width: 100%;
   margin: 0;
   padding: 1rem;
   bottom: -30%;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
-.card:hover .detalle{
+.card:hover .detalle {
   bottom: 0;
 }
 
 
-.quienesSomos .grid{
-  gap: 3rem;
-  min-height: 80vh;
-  align-items: center;
-}
 
-.porqueAdoptar{
-  background: #25AAAA;
+.porqueAdoptar {
+  background:var(--color-primary-400);
+  background-image: url("../imagenes/huellas.svg"), url("../imagenes/huellas.svg");
+  background-size: 70px, 70px;
+  background-position: 90% 40px , 10% 40px;
+  background-repeat: no-repeat;
+
   padding: 4rem 0;
   color: white;
   font-size: 1.1rem;

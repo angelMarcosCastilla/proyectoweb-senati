@@ -8,21 +8,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header class="header">
-      <nav class="nav container">
-        <a href="#"><h1>logo xd</h1></a>
-        <ul class="container-menu">
+      <nav class="nav container flex">
+        <a href="#"
+          ><img
+            class="logo"
+            src="./imagenes/logo.svg"
+            alt="logo de chincha adopta"
+        /></a>
+        <ul class="container-menu flex">
           <li class="menu__item">
-            <a class="menu__enlace" href="#quienesSomos">quienes somos</a>
+            <a class="menu__enlace" href="#quienesSomos">¿Quienes somos?</a>
           </li>
           <li class="menu__item">
-            <a class="menu__enlace" href="#">contactanos</a>
+            <a class="menu__enlace" href="#">Contactanos</a>
           </li>
           <li class="menu__item">
             <a class="menu__enlace" href="#porqueAdoptar">¿por que adoptar?</a>
@@ -32,13 +38,16 @@
     </header>
     <main>
       <section class="banner">
-        <div class="container-banner container">
+        <div class="container-banner container flex">
           <div class="banner-content">
-            <h1 class="banner__title">Adopta chincha</h1>
-            <p class="banner__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere voluptas ea culpa saepe laborum tempore! Iste odio velit tenetur, temporibus sequi eius dolores tempore, rerum voluptatum itaque facilis a.</p>
-            <a href="#adoptar" class="btn">
-              Adoptar una mascota
-            </a>
+            <h1 class="banner__title font-title text-white-100">Adopta chincha</h1>
+            <p class="banner__copy text-white-200">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              facere voluptas ea culpa saepe laborum tempore! Iste odio velit
+              tenetur, temporibus sequi eius dolores tempore, rerum voluptatum
+              itaque facilis a.
+            </p>
+            <a href="#adoptar" class="btn btn--white"> Adoptar una mascota </a>
           </div>
           <div class="banner-image">
             <img src="./imagenes/dog.svg" alt="imagen de perro" />
@@ -46,75 +55,77 @@
         </div>
       </section>
       <section id="quienesSomos" class="quienesSomos">
-        <div class="container grid ">
-          
-            <div>
-              <img src="./imagenes/about.jpg" alt="">
-            </div>
-            <div>
-              <h2>quienes somos</h2>
-             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil error, eligendi, rerum odio consequuntur ratione totam ad libero omnis necessitatibus architecto nam. Assumenda ratione et dolor accusamus veritatis unde deserunt?
-             </p>
-             <p>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non magni doloremque corrupti dicta alias voluptatibus optio laborum, voluptate, debitis omnis delectus quo saepe illum rem sint. Quam earum debitis nisi.
-             </p>
+        <div class="container grid">
+          <div>
+            <img src="./imagenes/about.jpg" alt="" />
+          </div>
+          <div>
+            <h2 class="title font-title">¿Quienes somos?</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              error, eligendi, rerum odio consequuntur ratione totam ad libero
+              omnis necessitatibus architecto nam. Assumenda ratione et dolor
+              accusamus veritatis unde deserunt?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non magni
+              doloremque corrupti dicta alias voluptatibus optio laborum,
+              voluptate, debitis omnis delectus quo saepe illum rem sint. Quam
+              earum debitis nisi.
+            </p>
           </div>
         </div>
-
       </section>
 
       <section id="porqueAdoptar" class="porqueAdoptar">
         <div class="container">
-          <h2 class="text-center">¿Por que adoptar?</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor eligendi aliquid sapiente asperiores blanditiis, maxime odit nisi inventore ab velit labore error consequuntur odio, reprehenderit explicabo consequatur, saepe molestias deserunt.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quasi facere, sequi dolorem porro, consequatur eos cum voluptates nisi neque id pariatur, debitis consectetur. Odio veritatis beatae saepe eveniet quisquam.</p>
+          <h2 class="text-center title font-title text-white-100">¿Por que adoptar?</h2>
+          <p class="text-white-200">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
+            eligendi aliquid sapiente asperiores blanditiis, maxime odit nisi
+            inventore ab velit labore error consequuntur odio, reprehenderit
+            explicabo consequatur, saepe molestias deserunt.
+          </p>
+          <p class="text-white-200">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+            quasi facere, sequi dolorem porro, consequatur eos cum voluptates
+            nisi neque id pariatur, debitis consectetur. Odio veritatis beatae
+            saepe eveniet quisquam.
+          </p>
         </div>
       </section>
       <section class="adopcion" id="adoptar">
-        <h2 class="text-center">Mascotas en adopcion</h2>
+        <h2 class="text-center font-title title">Mascotas en adopciòn</h2>
         <div class="container grid">
           <div class="card">
-            <img src="./imagenes/perro2.jpg" alt="">
+            <img src="./imagenes/perro2.jpg" alt="" />
             <span class="card__label">Adoptar</span>
-            <p class="detalle">
-              nombre 
-            </p>
+            <p class="detalle">nombre</p>
           </div>
           <div class="card">
-            <img src="./imagenes/loro.jpg" alt="">
+            <img src="./imagenes/loro.jpg" alt="" />
             <span class="card__label card__label--adoptado">adoptado</span>
-            <p class="detalle">
-              nombre 
-            </p>
+            <p class="detalle">nombre</p>
           </div>
           <div class="card">
-            <img src="./imagenes/gato2.jpg" alt="">
+            <img src="./imagenes/gato2.jpg" alt="" />
             <span class="card__label">Adoptar</span>
-            <p class="detalle">
-              nombre 
-            </p>
+            <p class="detalle">nombre</p>
           </div>
           <div class="card">
-            <img src="./imagenes/perro.jpg" alt="">
+            <img src="./imagenes/perro.jpg" alt="" />
             <span class="card__label">Adoptar</span>
-            <p class="detalle">
-              nombre 
-            </p>
+            <p class="detalle">nombre</p>
           </div>
           <div class="card">
-            <img src="./imagenes/gato.jpg" alt="">
+            <img src="./imagenes/gato.jpg" alt="" />
             <span class="card__label card__label--adoptado">Adotado</span>
-            <p class="detalle">
-              nombre 
-            </p>
+            <p class="detalle">nombre</p>
           </div>
           <div class="card">
-            <img src="./imagenes/perro3.jpg" alt="">
+            <img src="./imagenes/perro3.jpg" alt="" />
             <span class="card__label card__label--adoptado">Adotado</span>
-            <p class="detalle">
-              nombre 
-            </p>
+            <p class="detalle">nombre</p>
           </div>
         </div>
       </section>
