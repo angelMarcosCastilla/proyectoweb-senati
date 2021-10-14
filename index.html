@@ -41,13 +41,13 @@
         <div class="container-banner container flex">
           <div class="banner-content">
             <h1 class="banner__title font-title text-white-100">Adopta chincha</h1>
-            <p class="banner__copy text-white-200">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              facere voluptas ea culpa saepe laborum tempore! Iste odio velit
-              tenetur, temporibus sequi eius dolores tempore, rerum voluptatum
-              itaque facilis a.
-            </p>
-            <a href="#adoptar" class="btn btn--white"> Adoptar una mascota </a>
+            <blockquote class="banner__frases">
+              <p class="banner__copy text-white-200" id="frase">
+              
+              </p>
+              <footer class="frases-autor text-white-200"><span id="autor"></span></footer>
+            </blockquote>
+            <a href="#adoptar" class="btn btn--white btn-banner"> Adoptar una mascota </a>
           </div>
           <div class="banner-image">
             <img src="./imagenes/dog.svg" alt="imagen de perro" />
@@ -95,7 +95,7 @@
         </div>
       </section>
       <section class="adopcion" id="adoptar">
-        <h2 class="text-center font-title title">Mascotas en adopciòn</h2>
+        <h2 class="text-center font-title title">Adopta una mascota</h2>
         <div class="container grid">
           <div class="card">
             <img src="./imagenes/perro2.jpg" alt="" />
@@ -130,5 +130,7 @@
         </div>
       </section>
     </main>
+    <script src="./libs/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
