@@ -33,6 +33,7 @@
 
   --font-title: "Roboto", sans-serif;
   --font-normal: "Lato", sans-serif;
+
 }
 *,
 ::after,
@@ -46,14 +47,14 @@ body {
   margin: 0;
   font-family: var(--font-normal);
   color: var(--grey-400);
-  font-size: 17px;
+  font-size: 16px;
 }
 @media (max-width: 700px) {
   body{
-    font-size: 13px;
+    font-size: 14px;
   }
 }
-h1{
+h1 {
   margin: 0;
 }
 ul {
@@ -119,6 +120,12 @@ img {
   gap: 30px 20px;
 }
 
+@media (max-width: 500px) {
+  .title{
+    font-size: 1.8rem;
+  }
+}
+
 /* ---- header ---- */
 
 .header {
@@ -136,30 +143,46 @@ img {
   color: var(--grey-100);
 }
 
-@media (max-width: 800px) {
-  .container-banner {
-  flex-direction: column-reverse;
-  }
-  .banner-content,
-  .banner-image{
-    width: 100%; 
-  }
-  
-}
 
+
+
+@media (max-width: 540px) {
+  .container-menu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: .7rem .5rem;
+    z-index: 10;
+    background: var(--grey-100);
+    box-shadow: 0 -1px 2px var(--grey-300);
+  }  
+  
+  .menu__enlace{
+    color: var(--grey-400);
+    font-size: 13.5px;
+  }
+}
 /* ----- banner -----*/
 
 .banner {
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
   background: var(--color-primary-300);
   min-height: 500px;
- padding-top: 2rem;
- padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+@media (max-width: 800px) {
+  .container-banner {
+    flex-direction: column-reverse;
+  }
+  
 }
 .container-banner {
   min-height: 500px;
 }
-.banner__frases{
+.banner__frases {
   margin: 0;
   height: 120px;
   margin-bottom: 3rem;
@@ -170,8 +193,9 @@ img {
   margin-bottom: 2rem;
   color: var(--yellow-200);
 }
-.banner__copy,.frases-autor {
-  font-size: 1.2rem;
+.banner__copy,
+.frases-autor {
+  font-size: 1.1rem;
 }
 .banner-content {
   width: 40%;
@@ -181,24 +205,27 @@ img {
 }
 @media (max-width: 800px) {
   .container-banner {
-  flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .banner-content,
-  .banner-image{
+  .banner-image {
     width: 100%;
     margin-bottom: 2rem;
   }
-  .banner-image{
+  .banner-image {
     width: 80%;
   }
-.frases-autor{
-  text-align: right;
-}
-.btn-banner{
-  display:block;
-  text-align: center;
-  margin-bottom: 2rem;
-}
+  .frases-autor {
+    text-align: right;
+  }
+  .btn-banner {
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .banner__title{
+    text-align: center;
+  }
 }
 /* ---- Quienes somos -----*/
 
@@ -209,8 +236,6 @@ img {
 }
 
 /* ---- Adopcion ---- */
-
-
 
 /* Adopciom*/
 .adopcion {
@@ -228,7 +253,7 @@ img {
 }
 
 .card__label {
-  font-size: 1rem;
+  font-size: inherit;
   position: absolute;
   top: 0;
   left: 0;
@@ -256,16 +281,15 @@ img {
   bottom: 0;
 }
 
-
-
 .porqueAdoptar {
-  background:var(--color-primary-400);
-  background-image: url("../imagenes/huellas.svg"), url("../imagenes/huellas.svg");
+  background: var(--color-primary-300);
+  background-image: url("../imagenes/huellas.svg"),
+    url("../imagenes/huellas.svg");
   background-size: 70px, 70px;
-  background-position: 90% 40px , 10% 40px;
+  background-position: 90% 40px, 10% 40px;
   background-repeat: no-repeat;
 
   padding: 4rem 0;
   color: white;
-  font-size: 1.1rem;
+  font-size: inherit;
 }

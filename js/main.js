@@ -20,17 +20,20 @@ const frases = [
   },
 ];
 
-let i = 0;
-
-$("#frase").html(`"${frases[i].frase}"`);
-$("#autor").html(` - ${frases[i].autor}`);
-i++;
-
-setInterval(() => {
-  if (i == frases.length) i = 0;
+$(document).ready(function () {
+  let i = 0;
 
   $("#frase").html(`"${frases[i].frase}"`);
   $("#autor").html(` - ${frases[i].autor}`);
 
   i++;
-}, 6000);
+
+  setInterval(() => {
+    if (i === frases.length) i = 0;
+
+    $("#frase").html(`"${frases[i].frase}"`);
+    $("#autor").html(` - ${frases[i].autor}`);
+
+    i++;
+  }, 6000);
+});
