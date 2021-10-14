@@ -33,7 +33,6 @@
 
   --font-title: "Roboto", sans-serif;
   --font-normal: "Lato", sans-serif;
-
 }
 *,
 ::after,
@@ -45,12 +44,13 @@ html {
 }
 body {
   margin: 0;
+  margin-top: 85px;
   font-family: var(--font-normal);
   color: var(--grey-400);
   font-size: 16px;
 }
 @media (max-width: 700px) {
-  body{
+  body {
     font-size: 14px;
   }
 }
@@ -121,7 +121,7 @@ img {
 }
 
 @media (max-width: 500px) {
-  .title{
+  .title {
     font-size: 1.8rem;
   }
 }
@@ -129,11 +129,16 @@ img {
 /* ---- header ---- */
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
   padding: 1rem 0;
   background-color: var(--color-primary-300);
 }
 .logo {
-  width: 70px;
+  width: 60px;
 }
 .container-menu {
   gap: 20px;
@@ -143,23 +148,29 @@ img {
   color: var(--grey-100);
 }
 
-
-
-
 @media (max-width: 540px) {
-  .container-menu{
+  .logo{
+    width: 40px;
+  }
+  body{
+    margin:0;
+  }
+  .header{
+    position: static;
+  }
+  .container-menu {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     margin: 0;
-    padding: .7rem .5rem;
+    padding: 1rem 0.5rem;
     z-index: 10;
     background: var(--grey-100);
     box-shadow: 0 -1px 2px var(--grey-300);
-  }  
-  
-  .menu__enlace{
+  }
+
+  .menu__enlace {
     color: var(--grey-400);
     font-size: 13.5px;
   }
@@ -177,7 +188,6 @@ img {
   .container-banner {
     flex-direction: column-reverse;
   }
-  
 }
 .container-banner {
   min-height: 500px;
@@ -185,7 +195,7 @@ img {
 .banner__frases {
   margin: 0;
   height: 120px;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .banner__title {
   text-transform: uppercase;
@@ -223,7 +233,7 @@ img {
     text-align: center;
     margin-bottom: 2rem;
   }
-  .banner__title{
+  .banner__title {
     text-align: center;
   }
 }
@@ -231,13 +241,30 @@ img {
 
 .quienesSomos .grid {
   gap: 3rem;
-  min-height: 100vh;
+  min-height: 90vh;
   align-items: center;
+}
+
+/*----por que adoptar -----*/
+
+.porqueAdoptar {
+  padding: 3rem 0;
+}
+.container-porqueAdoptar {
+  background: var(--color-primary-300);
+  background-image: url("../imagenes/huellas.svg"),
+    url("../imagenes/huellas.svg");
+  background-size: 70px, 70px;
+  background-position: 90% 40px, 10% 40px;
+  background-repeat: no-repeat;
+
+  padding: 4rem 0;
+  color: white;
+  font-size: inherit;
 }
 
 /* ---- Adopcion ---- */
 
-/* Adopciom*/
 .adopcion {
   padding: 2rem 0;
 }
@@ -281,15 +308,6 @@ img {
   bottom: 0;
 }
 
-.porqueAdoptar {
-  background: var(--color-primary-300);
-  background-image: url("../imagenes/huellas.svg"),
-    url("../imagenes/huellas.svg");
-  background-size: 70px, 70px;
-  background-position: 90% 40px, 10% 40px;
-  background-repeat: no-repeat;
-
-  padding: 4rem 0;
-  color: white;
-  font-size: inherit;
+section[id] {
+  scroll-margin-top: 4rem;
 }
