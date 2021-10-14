@@ -7,19 +7,19 @@
   --color-primary-400: #0067a3;
   --color-primary-500: #00446d;
 
-  --green-100: #66c7a9;
+  --green-100: #9ee7d0;
   --green-200: #33b48d;
   --green-300: #00a170;
   --green-400: #009165;
   --green-500: #00714e;
 
-  --yellow-100: #ffd2a1;
+  --yellow-100: #ffddb8;
   --yellow-200: #fdb464;
   --yellow-300: #fdac53;
   --yellow-400: #ca8a42;
   --yellow-500: #b1783a;
 
-  --red-100: #e77a70;
+  --red-100: #ffaaa2;
   --red-200: #e05447;
   --red-300: #dd4132;
   --red-400: #c73b2d;
@@ -68,6 +68,15 @@ img {
   max-width: 100%;
 }
 
+section[id] {
+  scroll-margin-top: 4rem;
+}
+@media (max-width: 700px) {
+  section[id] {
+    scroll-margin-top: 0;
+  }
+}
+
 /* ---- utilidades----- */
 .container {
   width: 95%;
@@ -97,6 +106,7 @@ img {
 .btn--yellow {
   color: var(--yellow-500);
   background-color: var(--yellow-100);
+  border:1px solid var(--yellow-300);
 }
 .btn--white {
   color: var(--color-primary-300);
@@ -115,8 +125,10 @@ img {
   align-items: center;
 }
 .grid {
+  min-height: 500px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: 270px;
   gap: 30px 20px;
 }
 
@@ -149,13 +161,13 @@ img {
 }
 
 @media (max-width: 540px) {
-  .logo{
+  .logo {
     width: 40px;
   }
-  body{
-    margin:0;
+  body {
+    margin: 0;
   }
-  .header{
+  .header {
     position: static;
   }
   .container-menu {
@@ -240,11 +252,20 @@ img {
 /* ---- Quienes somos -----*/
 
 .quienesSomos .grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
   gap: 3rem;
   min-height: 90vh;
-  align-items: center;
+  align-content: center;
 }
-
+@media (max-width: 750px) {
+  .quienesSomos{
+    padding-top:2rem;
+  }
+  .quienesSomos .grid {
+    grid-template-columns: 1fr;
+  }
+}
 /*----por que adoptar -----*/
 
 .porqueAdoptar {
@@ -267,11 +288,20 @@ img {
 
 .adopcion {
   padding: 2rem 0;
+  margin-bottom: 4rem;
+
 }
 .card {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  opacity: 1;
+
+}
+.card--hidden{
+  opacity: 0;
+  order: 1;
+  transition: opacity .1s ease-in-out;
 }
 .card img {
   width: 100%;
@@ -284,8 +314,8 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--color-primary-100);
-  color: var(--color-primary-500);
+  background: var(--green-100);
+  color: var(--green-500);
   padding: 0.5rem 1rem;
 }
 .card__label--adoptado {
@@ -295,19 +325,122 @@ img {
 
 .detalle {
   position: absolute;
-  background: var(--yellow-100);
-  border: 1px solid var(--yellow-300);
-  color: var(--yellow-500);
+  background: var(--grey-400);
+  border: 1px solid var(--grey-500);
+  color: var(--grey-200);
   width: 100%;
   margin: 0;
   padding: 1rem;
-  bottom: -30%;
+  top: 300px;
   transition: 0.3s linear;
 }
 .card:hover .detalle {
-  bottom: 0;
+  top: 216px;
+}
+.optionFilter {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  gap: .4rem;
+}
+.filter-item {
+  outline: none;
+  cursor: pointer;
+  padding: .15rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.filter-item--active{
+  background-color: var(--grey-200);
+  color:var(--grey-400);
+  border-color: var(--grey-400);
 }
 
-section[id] {
-  scroll-margin-top: 4rem;
+/*--------contactanos--------*/
+.contactanos{
+  margin-bottom: 4rem;
+  position: relative;
+}
+.contactanos .container{
+  min-height: 60vh;
+  display:grid;
+  place-items: center;
+}
+.form{
+  width: 90%;
+  max-width: 450px;
+  padding: 3rem;
+  box-shadow: 0 2px 5px var(--grey-200);
+}
+.input-group{
+  margin-bottom: 2rem;
+}
+.input-group label{
+  display: block;
+  margin-bottom: 1rem;
+  color:var(--grey-400)
+}
+.form-input{
+  padding: .5rem 1rem;
+}
+input, textarea{
+  display: block;
+  width: 100%;
+  border:2px solid var(--grey-300);
+  outline: none;
+}
+textarea{
+  resize: none;
+  padding:1rem;
+}
+.btn-form{
+  width: 100%;
+  color: var(--grey-100);
+  background-color: var(--color-primary-300);
+  border: 1px solid var(--color-primary-500);
+  padding: .5rem;
+}
+
+.footer{
+  background-color: var(--grey-500);
+  color: var(--grey-100);
+  text-align: center;
+  padding :2rem;
+}
+
+.mensaje{
+  position: absolute;
+  top: 45px;
+  width: 90%;
+  padding: .5rem;
+  max-width: 450px;
+  border-radius: 4px;
+  background-color: var(--color-primary-100);
+  font-size: 1rem;
+  color: var(--color-primary-500);
+  border: 1px solid var (var(--color-primary-300));
+  opacity: 0;
+  
+}
+.alert--ative{
+  opacity: 1;
+}
+.error{
+  background: var(--red-100);
+  color: var(--red-500);
+  border:1px solid var(--red-300)
+}
+
+.warning{
+  background: var(--yellow-100);
+  color: var(--yellow-500);
+  border:1px solid var(--yellow-300)
+}
+
+.success{
+  background: var(--green-100);
+  color: var(--green-500);
+  border:1px solid var(--green-300)
 }

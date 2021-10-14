@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>logo xd</title>
+    <title>Chincha adopta</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,19 +25,19 @@
         /></a>
         <ul class="container-menu flex">
           <li class="menu__item">
-            <a class="menu__enlace" href="#quienesSomos">¿Quienes somos?</a>
+            <a class="menu__enlace" href="#quienes-somos">¿Quienes somos?</a>
           </li>
           <li class="menu__item">
-            <a class="menu__enlace" href="#">Contactanos</a>
+            <a class="menu__enlace" href="#contactanos">Contactanos</a>
           </li>
           <li class="menu__item">
-            <a class="menu__enlace" href="#porqueAdoptar">¿por que adoptar?</a>
+            <a class="menu__enlace" href="#porque-adoptar">¿por que adoptar?</a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="banner">
+      <section class="banner" id="#">
         <div class="container-banner container flex">
           <div class="banner-content">
             <h1 class="banner__title font-title text-white-100">
@@ -58,7 +58,7 @@
           </div>
         </div>
       </section>
-      <section id="quienesSomos" class="quienesSomos">
+      <section id="quienes-somos" class="quienesSomos">
         <div class="container grid">
           <div>
             <img src="./imagenes/about.jpg" alt="" />
@@ -81,64 +81,103 @@
         </div>
       </section>
 
-      <section id="porqueAdoptar" class="porqueAdoptar">
+      <section id="porque-adoptar" class="porqueAdoptar">
         <div class="container-porqueAdoptar">
           <div class="container">
             <h2 class="text-center title font-title text-white-100">
               ¿Por que adoptar?
             </h2>
             <p class="text-white-200">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
-              eligendi aliquid sapiente asperiores blanditiis, maxime odit nisi
-              inventore ab velit labore error consequuntur odio, reprehenderit
-              explicabo consequatur, saepe molestias deserunt.
+              En la mayoría de los casos, adoptar significa darle una segunda
+              oportunidad a un animal que ha sufrido un proceso de abandono, y
+              en ocasiones maltrato. Acogerlo en tu casa de por vida y darle la
+              estabilidad, los cuidados y el cariño que necesita va a ayudarlo a
+              que recupere su confianza y su autoestima.
             </p>
             <p class="text-white-200">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              quasi facere, sequi dolorem porro, consequatur eos cum voluptates
-              nisi neque id pariatur, debitis consectetur. Odio veritatis beatae
-              saepe eveniet quisquam.
+              Aunque algunos de los perros que han pasado por estos procesos
+              pueden ser temerosos o asustadizos, su capacidad de agradecimiento
+              a medida que se habitúen a tu familia o a ti llenará de felicidad
+              vuestro día a día, porque adoptar un perro contribuirá a que
+              generéis un vínculo de amor mutuo e incondicional.
             </p>
           </div>
         </div>
       </section>
       <section class="adopcion" id="adoptar">
         <h2 class="text-center font-title title">Adopta una mascota</h2>
+        <div class="optionFilter container">
+          <label class="filter-item btn--yellow filter-item--active"
+            >todos</label
+          >
+          <label class="filter-item btn--yellow">perro</label>
+          <label class="filter-item btn--yellow">gato</label>
+          <label class="filter-item btn--yellow">loro</label>
+        </div>
         <div class="container grid">
-          <div class="card">
+          <div class="card" data-especie="perro">
             <img src="./imagenes/perro2.jpg" alt="" />
             <span class="card__label">Adoptar</span>
             <p class="detalle">nombre</p>
           </div>
-          <div class="card">
+          <div class="card" data-especie="loro">
             <img src="./imagenes/loro.jpg" alt="" />
-            <span class="card__label card__label--adoptado">adoptado</span>
+            <span class="card__label card__label--adoptado">Adoptado</span>
             <p class="detalle">nombre</p>
           </div>
-          <div class="card">
+          <div class="card" data-especie="gato">
             <img src="./imagenes/gato2.jpg" alt="" />
             <span class="card__label">Adoptar</span>
             <p class="detalle">nombre</p>
           </div>
-          <div class="card">
+          <div class="card" data-especie="perro">
             <img src="./imagenes/perro.jpg" alt="" />
             <span class="card__label">Adoptar</span>
             <p class="detalle">nombre</p>
           </div>
-          <div class="card">
+          <div class="card" data-especie="gato">
             <img src="./imagenes/gato.jpg" alt="" />
-            <span class="card__label card__label--adoptado">Adotado</span>
+            <span class="card__label card__label--adoptado">Adoptado</span>
             <p class="detalle">nombre</p>
           </div>
-          <div class="card">
+          <div class="card" data-especie="perro">
             <img src="./imagenes/perro3.jpg" alt="" />
-            <span class="card__label card__label--adoptado">Adotado</span>
+            <span class="card__label card__label--adoptado">Adoptado</span>
             <p class="detalle">nombre</p>
           </div>
         </div>
       </section>
+      <section id="contactanos" class="contactanos">
+        <h2 class="text-center title">Contactanos</h2>
+        <div class="container">
+          <form action="" id="form" class="form">
+            <div class="input-group">
+              <label for="correo">Correo: </label>
+              <input type="text" id="coreo" class="form-input" name="email" />
+            </div>
+            <div class="input-group">
+              <label for="mensaje">Correo: </label>
+              <textarea
+                class=".form-input"
+                name="mensaje"
+                id="mensaje"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+            <button class="btn btn-form">Enviar mensaje</button>
+          </form>
+
+          <div class="mensaje" role="alert" id="alert"></div>
+        </div>
+      </section>
     </main>
-    <script src="./libs/jquery.min.js"></script>
+    <footer class="footer">
+      <div class="container">
+        <p>Pagina creada por : Angel Marcos Castilla</p>
+      </div>
+    </footer>
+    <script src="./js/funciones.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

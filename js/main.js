@@ -1,3 +1,4 @@
+
 const frases = [
   {
     frase: "Los perros no son toda tu vida, pero hacen tu vida completa",
@@ -20,20 +21,46 @@ const frases = [
   },
 ];
 
-$(document).ready(function () {
-  let i = 0;
+const $frase = document.getElementById("frase");
+const $autor = document.getElementById("autor");
+const $filterItem = document.querySelectorAll(".filter-item");
+const $card = document.querySelectorAll(".card");
+const $form = document.getElementById("form");
+const expresiones = {
+  email: /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/
+}
+let i = 0;
 
-  $("#frase").html(`"${frases[i].frase}"`);
-  $("#autor").html(` - ${frases[i].autor}`);
+$frase.textContent = `"${frases[i].frase}"`;
+$autor.textContent = ` - ${frases[i].autor}`;
+
+i++;
+setInterval(() => {
+  if (i === frases.length) i = 0;
+
+  $frase.textContent = `"${frases[i].frase}"`;
+  $autor.textContent = ` - ${frases[i].autor}`;
 
   i++;
+}, 6000);
 
-  setInterval(() => {
-    if (i === frases.length) i = 0;
+$filterItem.forEach((el) => {
+  el.addEventListener("click", filtrarBusqueda);
+});
 
-    $("#frase").html(`"${frases[i].frase}"`);
-    $("#autor").html(` - ${frases[i].autor}`);
+$form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const correo = $form["email"].value.trim();
+  const mensaje = $form["mensaje"].value.trim();
 
-    i++;
-  }, 6000);
+  if (mensaje === "" || correo === "") {
+    alertMensaje("warning", "hay campos vacios");
+  }else{
+    if(!expresiones.email.test(correo)){
+      alertMensaje("error", "Correo no valido");
+    }else{
+      alertMensaje("success", "Se envio correctamente su mensaje");
+    }
+  }
+
 });
