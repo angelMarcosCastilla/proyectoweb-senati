@@ -90,7 +90,7 @@ section[id] {
 }
 .title {
   font-size: 2rem;
-  color: var(--color-primary-400);
+  color: var(--grey-400);
 }
 .text-center {
   text-align: center;
@@ -147,7 +147,7 @@ section[id] {
   width: 100%;
   z-index: 10;
   padding: 1rem 0;
-  background-color: var(--color-primary-300);
+  background-color: var(--color-primary-400);
 }
 .logo {
   width: 60px;
@@ -191,7 +191,7 @@ section[id] {
 
 .banner {
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
-  background: var(--color-primary-300);
+  background: var(--color-primary-400);
   min-height: 500px;
   padding-top: 2rem;
   padding-bottom: 3rem;
